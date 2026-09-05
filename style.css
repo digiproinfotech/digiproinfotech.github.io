@@ -454,3 +454,9 @@
   flex-wrap:wrap;
   gap:20px;
 }
+
+/* ---------- Active nav link ---------- */
+.navlinks a.active{
+  color:var(--amber);
+  font-weight:600;
+}
