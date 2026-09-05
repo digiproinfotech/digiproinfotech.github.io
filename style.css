@@ -419,3 +419,38 @@
   .re-grid{ grid-template-columns:1fr; }
   .blog-full-post{ grid-template-columns:1fr; gap:6px; }
 }
+
+/* ---------- Social icon row ---------- */
+.social-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.social-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  color:var(--dim);
+  transition:border-color .15s ease, color .15s ease;
+}
+.social-icon:hover{
+  border-color:var(--amber);
+  color:var(--amber);
+}
+.social-icon svg{
+  width:18px;
+  height:18px;
+  fill:currentColor;
+}
+.actions-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
