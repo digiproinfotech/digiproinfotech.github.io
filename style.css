@@ -460,3 +460,70 @@
   color:var(--amber);
   font-weight:600;
 }
+
+/* ---------- Schedule page ---------- */
+.calendar-frame{
+  width:100%;
+  border:none;
+  display:block;
+  min-height:600px;
+}
+.task-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:16px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:22px 26px;
+  margin-top:24px;
+}
+.task-cta p{ color:var(--dim); font-size:0.95rem; margin:0; }
+.task-cta h3{ font-size:1.05rem; margin-bottom:4px; }
+
+/* ---------- Custom event list (Calendar API) ---------- */
+.events-list{ display:flex; flex-direction:column; }
+.event-row{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:20px;
+  padding:20px 0;
+  border-bottom:1px solid var(--line);
+}
+.event-row:last-child{ border-bottom:none; }
+.event-date{
+  font-family:'JetBrains Mono', monospace;
+  color:var(--cyan);
+  font-size:0.85rem;
+  line-height:1.4;
+}
+.event-date .day{
+  font-size:1.6rem;
+  color:var(--amber);
+  display:block;
+  font-weight:700;
+}
+.event-body h3{
+  font-size:1.05rem;
+  color:var(--text);
+  font-family:'IBM Plex Sans', sans-serif;
+  margin-bottom:4px;
+}
+.event-body .time{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.82rem;
+  color:var(--dim);
+  margin-bottom:6px;
+}
+.event-body p{ color:var(--dim); font-size:0.92rem; }
+.events-empty, .events-loading, .events-error{
+  color:var(--dim);
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.9rem;
+  padding:30px 0;
+}
+.events-error{ color:var(--red); }
+@media (max-width: 600px){
+  .event-row{ grid-template-columns:1fr; gap:4px; }
+}

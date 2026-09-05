@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule — Sunil Pareek</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">sunil@dev:~$</div>
+    <ul class="navlinks">
+      <li><a href="index.html#projects">projects</a></li>
+      <li><a href="services.html">services</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li><a href="real-estate.html">real estate</a></li>
+      <li><a href="schedule.html" class="active">schedule</a></li>
+      <li><a href="index.html#about">about</a></li>
+    </ul>
+    <a class="navcta" href="index.html#contact">./contact</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">~</a> / schedule</div>
+    <div class="eyebrow">$ cat upcoming-events.json</div>
+    <h1>Schedule</h1>
+    <p class="lede">Upcoming property visits, deal deadlines, and other events — updated live from my calendar.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:32px;">
+      <a class="btn btn-outline" href="index.html">./home</a>
+      <a class="btn btn-outline" href="services.html">./services</a>
+      <a class="btn btn-outline" href="blog.html">./blog</a>
+      <a class="btn btn-outline" href="real-estate.html">./real-estate</a>
+    </div>
+
+    <div class="term">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">upcoming-events.json</span>
+      </div>
+      <div class="term-body">
+        <div id="events-container">
+          <div class="events-loading">$ fetching events&hellip;</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="task-cta">
+      <div>
+        <h3>Task list</h3>
+        <p>Google Tasks doesn't support embedding directly on a page — open it below to see the full list, synced with the same account.</p>
+      </div>
+      <a class="btn btn-solid" href="https://tasks.google.com" target="_blank" rel="noopener">./open-tasks</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const API_KEY = 'AIzaSyAvEx4nCUiRnUZt_FBmduXJSPN9yX3WBek';
+  const CALENDAR_ID = 'c_e0102f200286895e2b588ed65a57b239d4e9f19e2707656c2f4d21b84d90af88@group.calendar.google.com';
+  const container = document.getElementById('events-container');
+
+  const now = new Date().toISOString();
+  const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${now}&singleEvents=true&orderBy=startTime&maxResults=15`;
+
+  fetch(url)
+    .then(res => {
+      if (!res.ok) throw new Error('Request failed: ' + res.status);
+      return res.json();
+    })
+    .then(data => {
+      const items = data.items || [];
+      if (items.length === 0) {
+        container.innerHTML = '<div class="events-empty">$ no upcoming events</div>';
+        return;
+      }
+      const monthNames = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+      let html = '<div class="events-list">';
+      items.forEach(ev => {
+        const startRaw = ev.start.dateTime || ev.start.date;
+        const endRaw = ev.end ? (ev.end.dateTime || ev.end.date) : null;
+        const start = new Date(startRaw);
+        const isAllDay = !ev.start.dateTime;
+        const day = start.getDate();
+        const month = monthNames[start.getMonth()];
+        let timeStr = 'All day';
+        if (!isAllDay) {
+          const opts = { hour: 'numeric', minute: '2-digit', hour12: true };
+          timeStr = start.toLocaleTimeString('en-IN', opts);
+          if (endRaw) {
+            const end = new Date(endRaw);
+            timeStr += ' – ' + end.toLocaleTimeString('en-IN', opts);
+          }
+        }
+        const title = ev.summary || '(untitled event)';
+        const desc = ev.description || (ev.location ? ('📍 ' + ev.location) : '');
+        html += `
+          <div class="event-row">
+            <div class="event-date"><span class="day">${day}</span>${month}</div>
+            <div class="event-body">
+              <h3>${title}</h3>
+              <div class="time">${timeStr}</div>
+              ${desc ? `<p>${desc}</p>` : ''}
+            </div>
+          </div>`;
+      });
+      html += '</div>';
+      container.innerHTML = html;
+    })
+    .catch(err => {
+      container.innerHTML = '<div class="events-error">$ error loading events — ' + err.message + '</div>';
+    });
+})();
+</script>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:8px;">
+    <span>© 2026 Sunil Pareek</span>
+    <span>exit code 0</span>
+  </div>
+</footer>
+
+</body>
+</html>
