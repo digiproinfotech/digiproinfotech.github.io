@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanta Asset Advisory | South Mumbai Realty Analytics</title>
+    <style>
+        :root {
+            --primary: #0a0f18;       /* Matte Charcoal Black from your physical card */
+            --accent: #d4af37;        /* Premium Card Metallic Gold */
+            --accent-dark: #aa8822;   /* Deep Gold hover states */
+            --text-dark: #1e293b;     /* High-contrast text layout */
+            --text-light: #64748b;    /* Secondary corporate text */
+            --bg-canvas: #fdfdfc;     /* Clean, premium background canvas */
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Georgia', sans-serif; 
+            background-color: var(--bg-canvas); 
+            color: var(--text-dark); 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.7; 
+        }
+
+        /* Executive Header Navigation */
+        nav {
+            background-color: var(--primary);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .nav-logo {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Main Hero Presentation Area */
+        header { 
+            background-color: var(--primary); 
+            color: white; 
+            padding: 100px 20px; 
+            text-align: center;
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.6rem; 
+            font-weight: 700; 
+            letter-spacing: 1px; 
+            color: #ffffff;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+        }
+        header p { 
+            color: var(--accent); 
+            font-size: 1.1rem; 
+            margin-top: 15px; 
+            font-weight: 300; 
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        
+        .intro-box { 
+            background: #ffffff; 
+            border-top: 3px solid var(--accent); 
+            padding: 35px; 
+            border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03); 
+            margin-bottom: 50px; 
+        }
+        .intro-box h2 { font-family: 'Georgia', serif; color: var(--primary); margin-top: 0; }
+
+        .section-title { 
+            font-family: 'Georgia', serif;
+            font-size: 1.6rem; 
+            color: var(--primary); 
+            border-bottom: 1px solid #e2e8f0; 
+            padding-bottom: 12px; 
+            margin-top: 50px; 
+        }
+
+        /* Property Sourcing Layout */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { 
+            background: #ffffff; 
+            padding: 30px; 
+            border-radius: 4px; 
+            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03); 
+            border: 1px solid #e2e8f0; 
+        }
+        .card h3 { margin-top: 0; color: var(--primary); font-family: 'Georgia', serif; }
+        .tag { 
+            display: inline-block; 
+            background: #f0f4f8; 
+            color: var(--primary); 
+            font-weight: 600; 
+            padding: 4px 10px; 
+            font-size: 0.75rem; 
+            margin-bottom: 15px; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Interactive Action Buttons */
+        .cta-btn { 
+            display: inline-block; 
+            background: var(--primary); 
+            color: white; 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: 600; 
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--primary);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .cta-btn:hover { background: transparent; color: var(--primary); }
+
+        /* The Modular Real-Time Popup Box Layer (Modal) */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 15, 24, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1000;
+        }
+        .modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .modal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 6px;
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-top: 4px solid var(--accent);
+        }
+        .modal-box h3 { margin-top: 0; font-family: 'Georgia', serif; color: var(--primary); font-size: 1.5rem; }
+        .close-btn {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5rem; color: var(--text-light);
+            cursor: pointer; border: none; background: none;
+        }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--primary); }
+        .form-input {
+            width: 100%; padding: 12px; border: 1px solid #cbd5e1;
+            border-radius: 4px; box-sizing: border-box; font-size: 1rem;
+        }
+        .submit-btn {
+            width: 100%; background: var(--primary); color: white;
+            padding: 12px; border: none; border-radius: 4px;
+            font-weight: 600; cursor: pointer; font-size: 0.9rem; text-transform: uppercase;
+        }
+        .submit-btn:hover { background: #1e293b; }
+
+        /* Direct Action Tray Layout */
+        .action-tray {
+            background: #ffffff; padding: 40px; border: 1px solid #e2e8f0;
+            border-radius: 4px; text-align: center; margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03);
+        }
+        .link-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .direct-link {
+            padding: 12px 24px; color: white; text-decoration: none;
+            font-size: 0.85rem; font-weight: 600; border-radius: 4px; text-transform: uppercase;
+            letter-spacing: 0.5px; transition: opacity 0.3s;
+        }
+        .direct-link:hover { opacity: 0.9; }
+
+        footer { text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">KANTA ASSET <span>ADVISORY</span></div>
+        <div class="nav-links">
+            <a href="#sourcing">Sourcing Mandates</a>
+            <a href="#framework">Operational Track</a>
+            <a href="#connect">Secure Sourcing Desk</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>KANTA ASSET ADVISORY</h1>
+        <p>Bespoke Commercial Acquisitions & High-Ticket Sourcing Metrics</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-box">
+            <h2>The Sourcing Desk Paradigm</h2>
+            <p>Operating as a specialized data optimization wing structurally aligned with the footprint of <strong>Kanta Developers (Bhoiwada, Bhuleshwar)</strong>, we leverage quantitative intelligence to map and source premium off-market properties across <strong>Lower Parel, Tardeo, and elite South Mumbai</strong> segments. We bridge the gap between abstract market data tracking and highly localized ground execution.</p>
+        </div>
+
+        <h2 class="section-title" id="sourcing">Acquisition Frameworks</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Asset Sourcing</span>
+                <h3>Premium Redeveloped Realties</h3>
+                <p>Off-market access to newly redeveloped high-rise residential portfolios inside South Mumbai's key luxury corridors. Managed smoothly in direct communication with trusted structural ground partner networks.</p>
+                <button class="cta-btn" onclick="openLeadModal()">Acquire Portfolio Data</button>
+            </div>
+
+            <div class="card">
+                <span class="tag">Commercial Networks</span>
+                <h3>Corporate Command Spaces</h3>
+                <p>Data-matched corporate office setups, logistic warehousing footprints, and commercial plots evaluated via clear micro-market yield verification profiles.</p>
+                <button class="cta-btn" onclick="openLeadModal()">Register Mandate Requirement</button>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="framework">The Transaction Architecture</h2>
+        <p>1. <strong>Mandate Acquisition:</strong> Institutional or HNWI entities securely register their precise targeted yields, square footage metrics, or geo-location parameters.</p>
+        <p>2. <strong>Analytical Mapping:</strong> Our principal digital desk filters available off-market datasets to isolate properties that fit the specific deployment strategy.</p>
