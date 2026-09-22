@@ -159,6 +159,7 @@
             position: relative;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             border-top: 4px solid var(--accent);
+            text-align: center;
         }
         .modal-box h3 { margin-top: 0; font-family: 'Georgia', serif; color: var(--primary); font-size: 1.5rem; }
         .close-btn {
@@ -173,6 +174,13 @@
             width: 100%; padding: 12px; border: 1px solid #cbd5e1;
             border-radius: 4px; box-sizing: border-box; font-size: 1rem;
         }
+        
+        /* Formspree Layout States styling overrides */
+        [data-fs-success], [data-fs-error] { display: none; padding: 12px; border-radius: 4px; font-size: 0.9rem; margin-bottom: 20px; text-align: left; }
+        [data-fs-success][data-fs-active] { display: block; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        [data-fs-error][data-fs-active] { display: block; background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        [data-fs-field][aria-invalid='true'] { border-color: #dc3545; }
+
         .submit-btn {
             width: 100%; background: var(--primary); color: white;
             padding: 12px; border: none; border-radius: 4px;
@@ -223,7 +231,7 @@
         <div class="grid">
             <div class="card">
                 <span class="tag">Asset Sourcing</span>
-                <h3>Premium Redeveloped Realties</h3>
+                <h3>Premium Redeveloped Units</h3>
                 <p>Off-market access to newly redeveloped high-rise residential portfolios inside South Mumbai's key luxury corridors. Managed smoothly in direct communication with trusted structural ground partner networks.</p>
                 <button class="cta-btn" onclick="openLeadModal()">Acquire Portfolio Data</button>
             </div>
@@ -236,6 +244,3 @@
             </div>
         </div>
 
-        <h2 class="section-title" id="framework">The Transaction Architecture</h2>
-        <p>1. <strong>Mandate Acquisition:</strong> Institutional or HNWI entities securely register their precise targeted yields, square footage metrics, or geo-location parameters.</p>
-        <p>2. <strong>Analytical Mapping:</strong> Our principal digital desk filters available off-market datasets to isolate properties that fit the specific deployment strategy.</p>
