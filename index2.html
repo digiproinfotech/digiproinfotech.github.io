@@ -3,244 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanta Asset Advisory | South Mumbai Realty Analytics</title>
+    <title>Kanta Asset Advisory | Institutional CRE Sourcing</title>
     <style>
+        /* Modern CSS Reset & Design Variables */
         :root {
-            --primary: #0a0f18;       /* Matte Charcoal Black from your physical card */
-            --accent: #d4af37;        /* Premium Card Metallic Gold */
-            --accent-dark: #aa8822;   /* Deep Gold hover states */
-            --text-dark: #1e293b;     /* High-contrast text layout */
-            --text-light: #64748b;    /* Secondary corporate text */
-            --bg-canvas: #fdfdfc;     /* Clean, premium background canvas */
-        }
-        
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Georgia', sans-serif; 
-            background-color: var(--bg-canvas); 
-            color: var(--text-dark); 
-            margin: 0; 
-            padding: 0; 
-            line-height: 1.7; 
+            --bg-color: #0a0f18;       /* Matte Charcoal Black */
+            --card-bg: #121824;      /* Slightly Lighter Charcoal */
+            --accent-gold: #d4af37;  /* Premium Metallic Gold */
+            --gold-hover: #f3c649;   /* Bright Gold Hover */
+            --text-main: #fdfdfc;    /* Off-White Canvas */
+            --text-muted: #9aa0a6;   /* Muted Grey */
+            --border-color: #2a3240; /* Subtle Divider */
         }
 
-        /* Executive Header Navigation */
-        nav {
-            background-color: var(--primary);
-            padding: 20px 40px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Container & Navigation */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .nav-logo {
-            color: #ffffff;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-        .nav-logo span { color: var(--accent); }
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-left: 25px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); }
 
-        /* Main Hero Presentation Area */
-        header { 
-            background-color: var(--primary); 
-            color: white; 
-            padding: 100px 20px; 
+        .brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-main);
+        }
+
+        .brand span {
+            color: var(--accent-gold);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
             text-align: center;
         }
-        header h1 { 
-            margin: 0; 
-            font-size: 2.6rem; 
-            font-weight: 700; 
-            letter-spacing: 1px; 
-            color: #ffffff;
-            font-family: 'Georgia', serif;
-            text-transform: uppercase;
-        }
-        header p { 
-            color: var(--accent); 
-            font-size: 1.1rem; 
-            margin-top: 15px; 
-            font-weight: 300; 
-            letter-spacing: 2px;
-            text-transform: uppercase;
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
         }
 
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        
-        .intro-box { 
-            background: #ffffff; 
-            border-top: 3px solid var(--accent); 
-            padding: 35px; 
-            border-radius: 4px; 
-            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03); 
-            margin-bottom: 50px; 
-        }
-        .intro-box h2 { font-family: 'Georgia', serif; color: var(--primary); margin-top: 0; }
-
-        .section-title { 
-            font-family: 'Georgia', serif;
-            font-size: 1.6rem; 
-            color: var(--primary); 
-            border-bottom: 1px solid #e2e8f0; 
-            padding-bottom: 12px; 
-            margin-top: 50px; 
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
         }
 
-        /* Property Sourcing Layout */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { 
-            background: #ffffff; 
-            padding: 30px; 
-            border-radius: 4px; 
-            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03); 
-            border: 1px solid #e2e8f0; 
-        }
-        .card h3 { margin-top: 0; color: var(--primary); font-family: 'Georgia', serif; }
-        .tag { 
-            display: inline-block; 
-            background: #f0f4f8; 
-            color: var(--primary); 
-            font-weight: 600; 
-            padding: 4px 10px; 
-            font-size: 0.75rem; 
-            margin-bottom: 15px; 
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Interactive Action Buttons */
-        .cta-btn { 
-            display: inline-block; 
-            background: var(--primary); 
-            color: white; 
-            padding: 12px 24px; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            font-weight: 600; 
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-            border: 1px solid var(--primary);
+        /* Button Framework - High Contrast & Guaranteed Visibility */
+        .btn {
+            display: inline-block;
             cursor: pointer;
-            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0.85rem 1.75rem;
+            border-radius: 4px;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid transparent;
+            text-align: center;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
-        .cta-btn:hover { background: transparent; color: var(--primary); }
 
-        /* The Modular Real-Time Popup Box Layer (Modal) */
-        .modal-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(10, 15, 24, 0.8);
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: #000000;
+            border-color: var(--accent-gold);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            border-color: var(--gold-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border-color: var(--accent-gold);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .cta-group {
             display: flex;
             justify-content: center;
-            align-items: center;
-            opacity: 0; pointer-events: none;
-            transition: opacity 0.3s ease;
-            z-index: 1000;
+            gap: 1.25rem;
+            flex-wrap: wrap;
         }
-        .modal-overlay.active { opacity: 1; pointer-events: auto; }
-        .modal-box {
-            background: white;
-            padding: 40px;
-            border-radius: 6px;
-            max-width: 450px;
+
+        /* Lead Capture Modal Overlay */
+        .modal-overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--accent-gold);
+            border-radius: 6px;
+            width: 100%;
+            max-width: 500px;
+            padding: 2.5rem;
             position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border-top: 4px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.25rem;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        #form-status {
+            margin-top: 1rem;
+            font-size: 0.9rem;
             text-align: center;
         }
-        .modal-box h3 { margin-top: 0; font-family: 'Georgia', serif; color: var(--primary); font-size: 1.5rem; }
-        .close-btn {
-            position: absolute;
-            top: 15px; right: 20px;
-            font-size: 1.5rem; color: var(--text-light);
-            cursor: pointer; border: none; background: none;
-        }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--primary); }
-        .form-input {
-            width: 100%; padding: 12px; border: 1px solid #cbd5e1;
-            border-radius: 4px; box-sizing: border-box; font-size: 1rem;
-        }
-        
-        /* Formspree Layout States styling overrides */
-        [data-fs-success], [data-fs-error] { display: none; padding: 12px; border-radius: 4px; font-size: 0.9rem; margin-bottom: 20px; text-align: left; }
-        [data-fs-success][data-fs-active] { display: block; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        [data-fs-error][data-fs-active] { display: block; background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        [data-fs-field][aria-invalid='true'] { border-color: #dc3545; }
 
-        .submit-btn {
-            width: 100%; background: var(--primary); color: white;
-            padding: 12px; border: none; border-radius: 4px;
-            font-weight: 600; cursor: pointer; font-size: 0.9rem; text-transform: uppercase;
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 6rem;
         }
-        .submit-btn:hover { background: #1e293b; }
-
-        /* Direct Action Tray Layout */
-        .action-tray {
-            background: #ffffff; padding: 40px; border: 1px solid #e2e8f0;
-            border-radius: 4px; text-align: center; margin-top: 50px;
-            box-shadow: 0 10px 30px rgba(10, 15, 24, 0.03);
-        }
-        .link-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
-        .direct-link {
-            padding: 12px 24px; color: white; text-decoration: none;
-            font-size: 0.85rem; font-weight: 600; border-radius: 4px; text-transform: uppercase;
-            letter-spacing: 0.5px; transition: opacity 0.3s;
-        }
-        .direct-link:hover { opacity: 0.9; }
-
-        footer { text-align: center; padding: 60px 20px; color: var(--text-light); font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="nav-logo">KANTA ASSET <span>ADVISORY</span></div>
-        <div class="nav-links">
-            <a href="#sourcing">Sourcing Mandates</a>
-            <a href="#framework">Operational Track</a>
-            <a href="#connect">Secure Sourcing Desk</a>
-        </div>
-    </nav>
-
     <header>
-        <h1>KANTA ASSET ADVISORY</h1>
-        <p>Bespoke Commercial Acquisitions & High-Ticket Sourcing Metrics</p>
+        <div class="brand">S. KUMAR <span>| KANTA ASSET ADVISORY</span></div>
+        <div class="nav-actions">
+            <button class="btn btn-primary" onclick="openModal()">Submit Mandate</button>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="intro-box">
-            <h2>The Sourcing Desk Paradigm</h2>
-            <p>Operating as a specialized data optimization wing structurally aligned with the footprint of <strong>Kanta Developers (Bhoiwada, Bhuleshwar)</strong>, we leverage quantitative intelligence to map and source premium off-market properties across <strong>Lower Parel, Tardeo, and elite South Mumbai</strong> segments. We bridge the gap between abstract market data tracking and highly localized ground execution.</p>
+    <section class="hero">
+        <h1>Institutional Commercial Real Estate Sourcing in South Mumbai</h1>
+        <p>Data-driven asset allocation, off-market inventory cross-matching, and usable carpet yield evaluation across Lower Parel, Tardeo, Worli, and Nariman Point.</p>
+        
+        <div class="cta-group">
+            <button class="btn btn-primary" onclick="openModal()">Submit Asset Mandate</button>
+            <a href="https://wa.me/919004099113?text=Hello%20S.%20Kumar,%20I%20would%20like%20to%20discuss%20a%20commercial%20asset%20mandate." class="btn btn-secondary" target="_blank">Direct WhatsApp Desk</a>
         </div>
+    </section>
 
-        <h2 class="section-title" id="sourcing">Acquisition Frameworks</h2>
-        <div class="grid">
-            <div class="card">
-                <span class="tag">Asset Sourcing</span>
-                <h3>Premium Redeveloped Units</h3>
-                <p>Off-market access to newly redeveloped high-rise residential portfolios inside South Mumbai's key luxury corridors. Managed smoothly in direct communication with trusted structural ground partner networks.</p>
-                <button class="cta-btn" onclick="openLeadModal()">Acquire Portfolio Data</button>
-            </div>
-
-            <div class="card">
-                <span class="tag">Commercial Networks</span>
-                <h3>Corporate Command Spaces</h3>
-                <p>Data-matched corporate office setups, logistic warehousing footprints, and commercial plots evaluated via clear micro-market yield verification profiles.</p>
-                <button class="cta-btn" onclick="openLeadModal()">Register Mandate Requirement</button>
-            </div>
+    <!-- Lead Capture Modal -->
+    <div class="modal-overlay" id="mandateModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3 style="margin-bottom: 0.5rem; color: var(--accent-gold);">Commercial Asset Mandate</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">Submit your corporate acquisition or leasing requirements directly to our primary sourcing desk.</p>
+            
+            <form id="mandateForm">
+                <div class="form-group">
+                    <label for="name">Full Name / Organization</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Apex Financial Services">
+                </div>
+                <div class="form-group">
+                    <label for="email">Corporate Email</label>
+                    <input type="email" id="email" name="email" required placeholder="name@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Direct Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                </div>
+                <div class="form-group">
+                    <label for="requirements">Asset Requirements (Micro-Market, Carpet Area, Timeline)</label>
+                    <textarea id="requirements" name="requirements" rows="3" required placeholder="e.g., 15,000 sq. ft. Grade-A space in Lower Parel / Worli within Q4 2026."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Mandate</button>
+                <div id="form-status"></div>
+            </form>
         </div>
+    </div>
 
+    <footer>
+        <p>&copy; Kanta Asset Advisory. Associated with Kanta Developers (Bhoiwada, Bhuleshwar, Mumbai).</p>
+    </footer>
+
+    <!-- Formspree & Modal JavaScript Logic -->
+    <script>
+        function openModal() {
+            document.getElementById('mandateModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('mandateModal').style.display = 'none';
+        }
+
+        // Close modal if user clicks outside of modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('mandateModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Vanilla JS Formspree AJAX Routing (Form ID Endpoint: maenolzv)
+        const form = document.getElementById("mandateForm");
+        const status = document.getElementById("form-status");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            
+            status.style.color = "var(--text-muted)";
+            status.innerHTML = "Transmitting mandate...";
+
+            fetch("https://formspree.io/f/maenolzv", {
+                method: "POST",
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.style.color = "var(--accent-gold)";
+                    status.innerHTML = "Mandate received. Our sourcing desk will reach out within 24 hours.";
+                    form.reset();
+                    setTimeout(() => {
+                        closeModal();
+                        status.innerHTML = "";
+                    }, 3000);
+                } else {
+                    response.json().then(data => {
+                        status.style.color = "#ff4d4d";
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerHTML = "Transmission error. Please try again or use direct WhatsApp.";
+                        }
+                    });
+                }
+            }).catch(error => {
+                status.style.color = "#ff4d4d";
+                status.innerHTML = "Transmission error. Please try again or use direct WhatsApp.";
+            });
+        }
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
