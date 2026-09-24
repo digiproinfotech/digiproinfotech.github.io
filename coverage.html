@@ -13,29 +13,44 @@
 <body class="antialiased">
 
   <!-- Navigation -->
-  <header class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <a href="index.html" class="text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
-        <span class="text-xs text-slate-400 border-l border-slate-700 pl-3 hidden sm:inline">Powered by DigiPro AI</span>
+  <!-- Responsive Executive Navigation -->
+  <header class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Brand -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <a href="index.html" class="text-base sm:text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
+        <span class="text-[10px] sm:text-xs text-slate-400 border-l border-slate-700 pl-2 sm:pl-3 hidden xs:inline">Powered by DigiPro AI</span>
       </div>
-      <nav class="hidden md:flex space-x-8 text-sm text-slate-300">
-  <a href="index.html" class="hover:text-white transition">Overview</a>
-  <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
-  <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
-  <a href="contact.html" class="hover:text-white transition">Contact</a>
-</nav>
-      <div class="flex items-center space-x-4">
-        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20Corridor%20Coverage" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2.5 rounded-md transition">
-          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Desk
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
+        <a href="index.html" class="hover:text-white transition">Overview</a>
+        <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
+        <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
+        <a href="contact.html" class="hover:text-white transition">Contact</a>
+      </nav>
+
+      <!-- Quick Action Buttons (Visible on Mobile & Desktop) -->
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
+          <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden xs:inline">WhatsApp</span>
         </a>
-        <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2.5 rounded-md transition">
-          <i class="fa-brands fa-linkedin text-sm"></i> Profile
+        <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
+          <i class="fa-brands fa-linkedin text-sm"></i> <span class="hidden xs:inline">Profile</span>
         </a>
       </div>
+
+    </div>
+
+    <!-- Mobile Sub-Navigation Bar -->
+    <div class="lg:hidden bg-slate-950/80 border-t border-slate-800/80 px-4 py-2 flex justify-around text-[12px] font-medium text-slate-300">
+      <a href="index.html" class="hover:text-amber-400">Overview</a>
+      <a href="sourcing-desk.html" class="hover:text-amber-400">Sourcing</a>
+      <a href="coverage.html" class="hover:text-amber-400">Corridors</a>
+      <a href="contact.html" class="hover:text-amber-400">Contact</a>
     </div>
   </header>
-
   <!-- Main Content -->
   <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto mb-16">
