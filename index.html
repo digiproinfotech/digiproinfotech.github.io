@@ -6,43 +6,92 @@
   <title>Kanta Asset Advisory | Institutional CRE Sourcing</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
+    .gold-accent { color: #d4af37; }
+    .bg-gold { background-color: #d4af37; }
+    .border-gold { border-color: #d4af37; }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
+<body class="antialiased">
 
-  <!-- Header -->
-  <header class="p-6 border-b border-slate-800 flex justify-between items-center max-w-6xl w-full mx-auto">
-    <div class="text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</div>
-    <div class="text-xs text-slate-400">South Mumbai Sourcing Desk</div>
+  <!-- Executive Top Navigation -->
+  <header class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</span>
+        <span class="text-xs text-slate-400 border-l border-slate-700 pl-3 hidden sm:inline">Powered by DigiPro AI</span>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 text-sm text-slate-300">
+        <a href="#overview" class="hover:text-white transition">Overview</a>
+        <a href="#sourcing" class="hover:text-white transition">Sourcing Desk</a>
+        <a href="#coverage" class="hover:text-white transition">South Mumbai Corridors</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <!-- Direct WhatsApp Button -->
+        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2.5 rounded-md transition">
+          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Desk
+        </a>
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/sunilpareek-cre" target="_blank" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2.5 rounded-md transition">
+          <i class="fa-brands fa-linkedin text-sm"></i> Profile
+        </a>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Hero Card -->
-  <main class="max-w-3xl mx-auto px-6 py-16 text-center space-y-6">
-    <div class="inline-block px-3 py-1 bg-amber-500/10 border border-amber-500/30 rounded-full text-xs font-semibold text-amber-400">
-      CONFIDENTIAL SOURCING DESK
+  <!-- Hero Section -->
+  <section id="overview" class="pt-36 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
+    <div class="md:w-3/5 space-y-6">
+      <div class="inline-block px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-semibold tracking-wide text-amber-400">
+        INSTITUTIONAL CRE ADVISORY DESK
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+        Commercial Real Estate Sourcing & Asset Advisory
+      </h1>
+      <p class="text-slate-300 text-lg leading-relaxed">
+        Sourcing off-market commercial floorplates, land parcels, and redevelopment assets across South Mumbai’s prime business corridors for corporate occupiers, HNWIs, and family offices.
+      </p>
+      <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+        <a href="mailto:sunil@digiproai.com" class="bg-gold hover:bg-yellow-500 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm">
+          Request Confidential Mandate
+        </a>
+      </div>
     </div>
     
-    <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-      Institutional Commercial Real Estate Sourcing
-    </h1>
-    
-    <p class="text-slate-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-      Specializing in off-market Grade-A office floorplates, commercial land, and redevelopment assets across South Mumbai (Lower Parel, Worli, Nariman Point, Tardeo).
-    </p>
-
-    <!-- Direct Action Buttons -->
-    <div class="pt-6 flex flex-wrap gap-4 justify-center items-center">
-      <a href="mailto:sunil@digiproai.com" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3 rounded-md transition text-sm flex items-center gap-2">
-        <i class="fa-solid fa-envelope"></i> Confidential Mandates
-      </a>
-      <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3 rounded-md transition text-sm flex items-center gap-2">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp Desk
-      </a>
+    <div class="md:w-2/5 w-full bg-slate-900 border border-slate-800 p-8 rounded-xl space-y-6">
+      <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-3">Advisory Mandate Focus</h3>
+      <div class="space-y-4 text-sm text-slate-300">
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-building-user text-amber-400 mt-1"></i>
+          <div>
+            <strong class="text-white block">Grade-A Corporate Leasing</strong>
+            Lower Parel, Worli, Nariman Point & BKC Connectors.
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-chart-line text-amber-400 mt-1"></i>
+          <div>
+            <strong class="text-white block">Off-Market Land & Redevelopment</strong>
+            Direct owner sourcing for redevelopment and JV models.
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="fa-solid fa-database text-amber-400 mt-1"></i>
+          <div>
+            <strong class="text-white block">Data-Backed Asset Evaluation</strong>
+            Data analytics & tenancy yield structuring via DigiPro AI.
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
 
   <!-- Footer -->
-  <footer class="p-6 border-t border-slate-900 text-center text-xs text-slate-500">
-    <p>© 2026 Kanta Asset Advisory | Powered by DigiPro AI Intelligence. Direct: sunil@digiproai.com</p>
+  <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
+    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Direct Desk: sunil@digiproai.com</p>
   </footer>
 
 </body>
