@@ -27,7 +27,7 @@
         <a class="active" href="contact.html">Contact</a>
       </nav>
       <div class="nav-cta">
-        <a class="icon-btn wa" href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" aria-label="WhatsApp">WA</a>
+        <a class="icon-btn wa" href="https://wa.me/919004099113" aria-label="WhatsApp">WA</a>
         <a class="icon-btn in" href="https://www.linkedin.com/in/kanta-cre" aria-label="LinkedIn">in</a>
         <button class="menu-btn" type="button" data-menu>MENU</button>
       </div>
@@ -45,17 +45,29 @@
   <section>
     <div class="wrap contact-grid">
       <div class="contact-list">
-        <a href="mailto:sunil@digiproai.com"><small>Email desk</small><strong>sunil@digiproai.com</strong></a>
-        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate"><small>WhatsApp</small><strong>+91 90040 99113</strong></a>
-        <a href="https://www.linkedin.com/in/kanta-cre"><small>Executive network</small><strong>linkedin.com/in/kanta-cre</strong></a>
+        <a class="desk-btn" href="mailto:sunil@digiproai.com">
+          <small>Email desk</small>
+          <strong>Write to the desk</strong>
+          <span class="desk-hint">Opens your mail app</span>
+        </a>
+        <a class="desk-btn desk-wa" href="https://wa.me/919004099113">
+          <small>WhatsApp desk</small>
+          <strong>Message on WhatsApp</strong>
+          <span class="desk-hint">Opens chat — type your note</span>
+        </a>
+        <a class="desk-btn" href="https://www.linkedin.com/in/kanta-cre">
+          <small>Executive network</small>
+          <strong>LinkedIn profile</strong>
+          <span class="desk-hint">View on LinkedIn</span>
+        </a>
       </div>
       <form class="form" action="https://formspree.io/f/maenolzv" method="POST" data-formspree>
-        <input type="hidden" name="_subject" value="South Mumbai CRE mandate">
+        <input type="hidden" name="_subject" value="South Mumbai CRE inquiry">
         <label>Name<input name="name" required></label>
         <label>Organisation<input name="organisation"></label>
         <label>Email<input type="email" name="email" required></label>
         <label>Phone<input name="phone"></label>
-        <label>Mandate type
+        <label>Inquiry type
           <select name="mandate">
             <option>Corporate leasing</option>
             <option>Acquisition</option>

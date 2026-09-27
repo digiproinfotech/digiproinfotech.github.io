@@ -27,7 +27,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="nav-cta">
-        <a class="icon-btn wa" href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" aria-label="WhatsApp">WA</a>
+        <a class="icon-btn wa" href="https://wa.me/919004099113" aria-label="WhatsApp">WA</a>
         <a class="icon-btn in" href="https://www.linkedin.com/in/kanta-cre" aria-label="LinkedIn">in</a>
         <button class="menu-btn" type="button" data-menu>MENU</button>
       </div>
@@ -41,7 +41,7 @@
         <h1>Commercial Real Estate Sourcing &amp; Asset Advisory</h1>
         <p class="lede">Off-market floorplates, land parcels and redevelopment assets across South Mumbai’s prime business corridors — for corporate occupiers, HNWIs and family offices.</p>
         <div class="actions">
-          <a class="btn btn-gold" href="contact.html" data-open-mandate>Request a confidential mandate</a>
+          <button class="btn btn-gold" type="button" data-open-mandate>Submit inquiry</button>
           <a class="btn btn-ghost" href="coverage.html">View corridors</a>
         </div>
       </div>
@@ -122,40 +122,43 @@
       </div>
       <div class="actions" style="margin-top:24px">
         <a class="btn btn-ghost" href="coverage.html">Full corridor notes</a>
-        <a class="btn btn-gold" href="contact.html">Open the desk</a>
+        <button class="btn btn-gold" type="button" data-open-mandate>Submit inquiry</button>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap foot">
-      <div>© 2026 Kanta Asset Advisory &amp; DigiPro AI. Direct desk: <a href="mailto:sunil@digiproai.com">sunil@digiproai.com</a></div>
+      <div>© 2026 Kanta Asset Advisory &amp; DigiPro AI</div>
       <div>South Mumbai · Confidential mandates only</div>
     </div>
   </footer>
+
   <div class="modal hidden" id="mandateModal">
     <div class="modal-card">
       <button class="close" type="button" data-close-mandate aria-label="Close">×</button>
-      <p class="kicker">Confidential mandate</p>
-      <h2>Enquiry</h2>
-      <form class="form" action="https://formspree.io/f/maenolzv" method="POST" data-formspree>
-        <input type="hidden" name="_subject" value="South Mumbai CRE mandate">
-        <label>Name<input name="name" required></label>
-        <label>Organisation<input name="organisation"></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Phone<input name="phone"></label>
-        <label>Mandate type
-          <select name="mandate">
-            <option>Corporate leasing</option>
-            <option>Acquisition</option>
-            <option>Land / redevelopment</option>
-            <option>Owner representation</option>
-          </select>
-        </label>
-        <label>Brief<textarea name="message" placeholder="Corridor, size, timing, confidentiality notes."></textarea></label>
-        <p data-status class="muted"></p>
-        <button class="btn btn-gold" type="submit">Submit inquiry</button>
-      </form>
+      <div class="modal-scroll">
+        <p class="kicker">Confidential desk</p>
+        <h2>Enquiry</h2>
+        <form class="form" action="https://formspree.io/f/maenolzv" method="POST" data-formspree>
+          <input type="hidden" name="_subject" value="South Mumbai CRE inquiry">
+          <label>Name<input name="name" required></label>
+          <label>Organisation<input name="organisation"></label>
+          <label>Email<input type="email" name="email" required></label>
+          <label>Phone<input name="phone"></label>
+          <label>Inquiry type
+            <select name="mandate">
+              <option>Corporate leasing</option>
+              <option>Acquisition</option>
+              <option>Land / redevelopment</option>
+              <option>Owner representation</option>
+            </select>
+          </label>
+          <label>Brief<textarea name="message" placeholder="Corridor, size, timing, confidentiality notes."></textarea></label>
+          <p data-status class="muted"></p>
+          <button class="btn btn-gold" type="submit">Submit inquiry</button>
+        </form>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
