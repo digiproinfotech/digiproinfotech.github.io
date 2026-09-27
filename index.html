@@ -27,7 +27,7 @@
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
-        <a href="index.html" class="hover:text-white transition">Overview</a>
+        <a href="index.html" class="text-amber-400 font-semibold">Overview</a>
         <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
         <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
         <a href="contact.html" class="hover:text-white transition">Contact</a>
@@ -67,9 +67,9 @@
         Sourcing off-market commercial floorplates, land parcels, and redevelopment assets across South Mumbai’s prime business corridors for corporate occupiers, HNWIs, and family offices.
       </p>
       <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-        <a href="mailto:sunil@digiproai.com" class="bg-gold hover:bg-yellow-500 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm">
-          Request Confidential Mandate
-        </a>
+        <button onclick="openModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm flex items-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Request Confidential Mandate
+        </button>
       </div>
     </div>
     
@@ -106,5 +106,67 @@
     <p>© 2026 Kanta Asset Advisory & DigiPro AI. Direct Desk: sunil@digiproai.com</p>
   </footer>
 
+  <!-- Confidential Mandate Modal -->
+  <div id="mandateModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-xl max-w-xl w-full text-left shadow-2xl relative">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Request Confidential Mandate</h2>
+      <p class="text-xs sm:text-sm text-slate-400 mb-6">Submit requirements for off-market commercial office sourcing or asset acquisitions.</p>
+
+      <form action="https://formspree.io/f/maenolzv" method="POST" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Full Name</label>
+          <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="e.g. Corporate / Advisory Contact">
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Email</label>
+            <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="name@company.com">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Contact Number</label>
+            <input type="tel" name="phone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="+91 xxxxx xxxxx">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Requirement Type</label>
+          <select name="requirement_type" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-slate-300 focus:outline-none focus:border-amber-400 transition">
+            <option value="Commercial Office Space (Lease/Purchase)">Commercial Office Space (Lease/Purchase)</option>
+            <option value="Off-Market Commercial Asset Acquisition">Off-Market Commercial Asset Acquisition</option>
+            <option value="Joint Venture / Commercial Redevelopment Land">Joint Venture / Commercial Redevelopment Land</option>
+            <option value="Other Institutional Inquiry">Other Institutional Inquiry</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Mandate Details</label>
+          <textarea name="message" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="Specify carpet area, budget range, or target corridor..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-lg transition text-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('mandateModal').classList.remove('hidden');
+      document.getElementById('mandateModal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('mandateModal').classList.remove('flex');
+      document.getElementById('mandateModal').classList.add('hidden');
+    }
+  </script>
+  
 </body>
 </html>
