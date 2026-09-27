@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kanta Asset Advisory">
+  <rect x="1.5" y="1.5" width="61" height="61" rx="4" fill="#0c1018" stroke="#c9a227" stroke-width="2"/>
+  <rect x="7" y="7" width="50" height="50" rx="2" fill="none" stroke="#c9a227" stroke-width="0.6" opacity="0.45"/>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="600" fill="#e4c56a">K</text>
+  <line x1="18" y1="48" x2="46" y2="48" stroke="#c9a227" stroke-width="1"/>
+</svg>

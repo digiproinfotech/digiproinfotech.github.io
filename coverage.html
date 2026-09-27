@@ -4,76 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>South Mumbai Corridors | Kanta Asset Advisory</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
-  </style>
+  <meta name="description" content="Hyper-local coverage of Lower Parel, Worli, Nariman Point, Fort and BKC connectors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
-
-  <!-- Responsive Executive Navigation -->
-  <header class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      
-      <!-- Logo / Brand -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="index.html" class="text-base sm:text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
-        <span class="text-[10px] sm:text-xs text-slate-400 border-l border-slate-700 pl-2 sm:pl-3 hidden xs:inline">Powered by DigiPro AI</span>
-      </div>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
-        <a href="index.html" class="hover:text-white transition">Overview</a>
-        <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
-        <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Kanta Asset Advisory">
+        <span class="brand-text">
+          <strong>KANTA ASSET ADVISORY</strong>
+          <span>Powered by DigiPro AI</span>
+        </span>
+      </a>
+      <nav class="links" id="navLinks">
+        <a href="index.html">Overview</a>
+        <a href="sourcing-desk.html">Sourcing Desk</a>
+        <a class="active" href="coverage.html">South Mumbai Corridors</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <!-- Quick Action Buttons (Visible on Mobile & Desktop) -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden xs:inline">WhatsApp</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-linkedin text-sm"></i> <span class="hidden xs:inline">Profile</span>
-        </a>
+      <div class="nav-cta">
+        <a class="icon-btn wa" href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" aria-label="WhatsApp">WA</a>
+        <a class="icon-btn in" href="https://www.linkedin.com/in/kanta-cre" aria-label="LinkedIn">in</a>
+        <button class="menu-btn" type="button" data-menu>MENU</button>
       </div>
-
-    </div>
-
-    <!-- Mobile Sub-Navigation Bar -->
-    <div class="lg:hidden bg-slate-950/80 border-t border-slate-800/80 px-4 py-2 flex justify-around text-[12px] font-medium text-slate-300">
-      <a href="index.html" class="hover:text-amber-400">Overview</a>
-      <a href="sourcing-desk.html" class="hover:text-amber-400">Sourcing</a>
-      <a href="coverage.html" class="hover:text-amber-400">Corridors</a>
-      <a href="contact.html" class="hover:text-amber-400">Contact</a>
     </div>
   </header>
-  <!-- Main Content -->
-  <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h1 class="text-4xl font-extrabold text-white mb-4">Core Geographic Focus</h1>
-      <p class="text-slate-400 text-lg">Hyper-localized intelligence across South Mumbai's highest-yielding business micro-markets.</p>
-    </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
-        <h3 class="text-2xl font-bold text-white mb-2">Lower Parel & Worli</h3>
-        <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-4">Institutional Commercial Core</span>
-        <p class="text-slate-400 text-sm leading-relaxed">Focusing on Grade-A corporate towers, consolidated IT/BFSI floorplates, and off-market commercial redevelopment parcels in the Central-South corridor.</p>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl">
-        <h3 class="text-2xl font-bold text-white mb-2">Nariman Point & Fort</h3>
-        <span class="text-xs font-semibold text-amber-400 uppercase tracking-widest block mb-4">Legacy Financial Hub</span>
-        <p class="text-slate-400 text-sm leading-relaxed">Sourcing high-yielding institutional office spaces, heritage asset re-positioning, and direct family office mandates in South Mumbai’s central business district.</p>
-      </div>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Geographic focus</p>
+      <h1>South Mumbai corridors</h1>
+      <p class="lede">Hyper-local intelligence across the highest-yielding business micro-markets — not a pan-India brochure.</p>
     </div>
   </section>
 
-  <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
-    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Direct Desk: sunil@digiproai.com</p>
+  <section>
+    <div class="wrap corridors">
+      <article class="corridor">
+        <p class="kicker">Institutional commercial core</p>
+        <h3>Lower Parel &amp; Worli</h3>
+        <p class="muted">Grade-A corporate towers, consolidated IT/BFSI floorplates and off-market commercial redevelopment parcels on the central-south corridor.</p>
+      </article>
+      <article class="corridor">
+        <p class="kicker">Legacy financial hub</p>
+        <h3>Nariman Point &amp; Fort</h3>
+        <p class="muted">High-yielding institutional offices, heritage asset repositioning and direct family-office mandates in the old CBD.</p>
+      </article>
+      <article class="corridor">
+        <p class="kicker">Connectors</p>
+        <h3>BKC approaches &amp; eastern spine</h3>
+        <p class="muted">Occupiers who need South Mumbai presence with BKC connectivity — plates and land that sit on the seam, not only inside one cluster.</p>
+      </article>
+      <article class="corridor">
+        <p class="kicker">Capital view</p>
+        <h3>Land &amp; redevelopment</h3>
+        <p class="muted">Owner conversations on residual FSI, JV structures and hold-versus-redevelop — before a public process starts.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 Kanta Asset Advisory &amp; DigiPro AI. <a href="mailto:sunil@digiproai.com">sunil@digiproai.com</a></div>
+      <div>South Mumbai only</div>
+    </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -3,217 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kanta Asset Advisory | Institutional CRE Sourcing</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
-    .gold-accent { color: #d4af37; }
-    .bg-gold { background-color: #d4af37; }
-    .border-gold { border-color: #d4af37; }
-  </style>
+  <title>Kanta Asset Advisory | Institutional CRE Sourcing, South Mumbai</title>
+  <meta name="description" content="Off-market commercial floorplates, land parcels and redevelopment assets across South Mumbai. Confidential mandates for corporates, HNWIs and family offices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
-
-  <!-- Responsive Executive Navigation -->
-  <header class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      
-      <!-- Logo / Brand -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="index.html" class="text-base sm:text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
-        <span class="text-[10px] sm:text-xs text-slate-400 border-l border-slate-700 pl-2 sm:pl-3 hidden xs:inline">Powered by DigiPro AI</span>
-      </div>
-
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
-        <a href="index.html" class="text-amber-400 font-semibold">Overview</a>
-        <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
-        <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Kanta Asset Advisory">
+        <span class="brand-text">
+          <strong>KANTA ASSET ADVISORY</strong>
+          <span>Powered by DigiPro AI</span>
+        </span>
+      </a>
+      <nav class="links" id="navLinks">
+        <a class="active" href="index.html">Overview</a>
+        <a href="sourcing-desk.html">Sourcing Desk</a>
+        <a href="coverage.html">South Mumbai Corridors</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <!-- Quick Action Buttons (Visible on Mobile & Desktop) -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden xs:inline">WhatsApp</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-linkedin text-sm"></i> <span class="hidden xs:inline">Profile</span>
-        </a>
+      <div class="nav-cta">
+        <a class="icon-btn wa" href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" aria-label="WhatsApp">WA</a>
+        <a class="icon-btn in" href="https://www.linkedin.com/in/kanta-cre" aria-label="LinkedIn">in</a>
+        <button class="menu-btn" type="button" data-menu>MENU</button>
       </div>
-
-    </div>
-
-    <!-- Mobile Sub-Navigation Bar -->
-    <div class="lg:hidden bg-slate-950/80 border-t border-slate-800/80 px-4 py-2 flex justify-around text-[12px] font-medium text-slate-300">
-      <a href="index.html" class="hover:text-amber-400">Overview</a>
-      <a href="sourcing-desk.html" class="hover:text-amber-400">Sourcing</a>
-      <a href="coverage.html" class="hover:text-amber-400">Corridors</a>
-      <a href="contact.html" class="hover:text-amber-400">Contact</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="overview" class="pt-36 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
-    <div class="md:w-3/5 space-y-6">
-      <div class="inline-block px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-semibold tracking-wide text-amber-400">
-        INSTITUTIONAL CRE ADVISORY DESK
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">Institutional CRE Advisory Desk</p>
+        <h1>Commercial Real Estate Sourcing &amp; Asset Advisory</h1>
+        <p class="lede">Off-market floorplates, land parcels and redevelopment assets across South Mumbai’s prime business corridors — for corporate occupiers, HNWIs and family offices.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="contact.html" data-open-mandate>Request a confidential mandate</a>
+          <a class="btn btn-ghost" href="coverage.html">View corridors</a>
+        </div>
       </div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
-        Commercial Real Estate Sourcing & Asset Advisory
-      </h1>
-      <p class="text-slate-300 text-lg leading-relaxed">
-        Sourcing off-market commercial floorplates, land parcels, and redevelopment assets across South Mumbai’s prime business corridors for corporate occupiers, HNWIs, and family offices.
-      </p>
-  <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-  <button onclick="openModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm flex items-center gap-2">
-    <i class="fa-solid fa-paper-plane"></i> Enquiry
-  </button>
-</div>
-      </div>
+      <aside class="mandate">
+        <h3>Advisory mandate focus</h3>
+        <div class="item">
+          <strong>Grade-A corporate leasing</strong>
+          <p>Lower Parel, Worli, Nariman Point and BKC connectors.</p>
+        </div>
+        <div class="item">
+          <strong>Off-market land &amp; redevelopment</strong>
+          <p>Direct owner sourcing for redevelopment and JV models.</p>
+        </div>
+        <div class="item">
+          <strong>Data-backed asset evaluation</strong>
+          <p>Tenancy yield structuring and analytics via DigiPro AI.</p>
+        </div>
+      </aside>
     </div>
-    
-    <div class="md:w-2/5 w-full bg-slate-900 border border-slate-800 p-8 rounded-xl space-y-6">
-      <h3 class="text-xl font-bold text-white border-b border-slate-800 pb-3">Advisory Mandate Focus</h3>
-      <div class="space-y-4 text-sm text-slate-300">
-        <div class="flex items-start gap-3">
-          <i class="fa-solid fa-building-user text-amber-400 mt-1"></i>
-          <div>
-            <strong class="text-white block">Grade-A Corporate Leasing</strong>
-            Lower Parel, Worli, Nariman Point & BKC Connectors.
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <i class="fa-solid fa-chart-line text-amber-400 mt-1"></i>
-          <div>
-            <strong class="text-white block">Off-Market Land & Redevelopment</strong>
-            Direct owner sourcing for redevelopment and JV models.
-          </div>
-        </div>
-        <div class="flex items-start gap-3">
-          <i class="fa-solid fa-database text-amber-400 mt-1"></i>
-          <div>
-            <strong class="text-white block">Data-Backed Asset Evaluation</strong>
-            Data analytics & tenancy yield structuring via DigiPro AI.
-          </div>
-        </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Why a desk, not a listing portal</p>
+        <h2>Quiet sourcing for people who cannot shop the market in public.</h2>
+        <p class="muted">Most of the stock that matters in South Mumbai never reaches a brochure. We work owner-side and occupier-side, then structure the brief before anyone is introduced.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>Occupier mandates</h3>
+          <p class="muted">Consolidated floorplates for MNCs, funds and professional firms that need Grade-A space without a noisy search.</p>
+        </article>
+        <article class="card">
+          <h3>Capital mandates</h3>
+          <p class="muted">Family offices and private wealth desks looking at yield, redevelopment optionality, or a controlled entry into a corridor.</p>
+        </article>
+        <article class="card">
+          <h3>Owner representation</h3>
+          <p class="muted">Discreet placement of land, buildings and vacant plates with counterparties who can actually close.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
-    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Direct Desk: sunil@digiproai.com</p>
+  <section class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">How a mandate runs</p>
+        <h2>Four steps. No theatre.</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Brief</h3><p class="muted">Size, corridor, tenure, budget band and confidentiality rules.</p></div>
+        <div class="step"><div class="num">02</div><h3>Map</h3><p class="muted">Live stock plus off-market owners across the four core micro-markets.</p></div>
+        <div class="step"><div class="num">03</div><h3>Underwrite</h3><p class="muted">Rent, vacancy, title notes and yield structure before a meeting is set.</p></div>
+        <div class="step"><div class="num">04</div><h3>Introduce</h3><p class="muted">One shortlist. Direct conversations. Transaction support through close.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Coverage</p>
+        <h2>South Mumbai, worked as four markets — not one pin on a map.</h2>
+      </div>
+      <div class="corridors">
+        <article class="corridor">
+          <p class="kicker">Institutional core</p>
+          <h3>Lower Parel &amp; Worli</h3>
+          <p class="muted">Grade-A towers, large BFSI/IT plates and redevelopment parcels on the central-south spine.</p>
+        </article>
+        <article class="corridor">
+          <p class="kicker">Legacy financial hub</p>
+          <h3>Nariman Point &amp; Fort</h3>
+          <p class="muted">Institutional offices, heritage repositioning and family-office mandates in the old CBD.</p>
+        </article>
+      </div>
+      <div class="actions" style="margin-top:24px">
+        <a class="btn btn-ghost" href="coverage.html">Full corridor notes</a>
+        <a class="btn btn-gold" href="contact.html">Open the desk</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 Kanta Asset Advisory &amp; DigiPro AI. Direct desk: <a href="mailto:sunil@digiproai.com">sunil@digiproai.com</a></div>
+      <div>South Mumbai · Confidential mandates only</div>
+    </div>
   </footer>
-
-  <!-- Confidential Mandate Modal -->
-  <div id="mandateModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-xl max-w-xl w-full text-left shadow-2xl relative">
-      
-      <!-- Close Button -->
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-
-      <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Request Confidential Mandate</h2>
-      <p class="text-xs sm:text-sm text-slate-400 mb-6">Submit requirements for off-market commercial office sourcing or asset acquisitions.</p>
-
-      <!-- Status Message Alert -->
-      <div id="formStatus" class="hidden mb-4 text-sm font-semibold p-3 rounded-lg text-emerald-400 bg-emerald-950/60 border border-emerald-800"></div>
-
-      <form id="mandateForm" action="https://formspree.io/f/maenolzv" method="POST" class="space-y-4">
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Full Name</label>
-          <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="e.g. Corporate / Advisory Contact">
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Email</label>
-            <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="name@company.com">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Contact Number</label>
-            <input type="tel" name="phone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="+91 xxxxx xxxxx">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Requirement Type</label>
-          <select name="requirement_type" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-slate-300 focus:outline-none focus:border-amber-400 transition">
-            <option value="Commercial Office Space (Lease/Purchase)">Commercial Office Space (Lease/Purchase)</option>
-            <option value="Off-Market Commercial Asset Acquisition">Off-Market Commercial Asset Acquisition</option>
-            <option value="Joint Venture / Commercial Redevelopment Land">Joint Venture / Commercial Redevelopment Land</option>
-            <option value="Other Institutional Inquiry">Other Institutional Inquiry</option>
+  <div class="modal hidden" id="mandateModal">
+    <div class="modal-card">
+      <button class="close" type="button" data-close-mandate aria-label="Close">×</button>
+      <p class="kicker">Confidential mandate</p>
+      <h2>Enquiry</h2>
+      <form class="form" action="https://formspree.io/f/maenolzv" method="POST" data-formspree>
+        <input type="hidden" name="_subject" value="South Mumbai CRE mandate">
+        <label>Name<input name="name" required></label>
+        <label>Organisation<input name="organisation"></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input name="phone"></label>
+        <label>Mandate type
+          <select name="mandate">
+            <option>Corporate leasing</option>
+            <option>Acquisition</option>
+            <option>Land / redevelopment</option>
+            <option>Owner representation</option>
           </select>
-        </div>
-
-        <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Mandate Details</label>
-          <textarea name="message" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="Specify carpet area, budget range, or target corridor..."></textarea>
-        </div>
-
-        <button type="submit" id="submitBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-lg transition text-sm flex items-center justify-center gap-2">
-          <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
-        </button>
+        </label>
+        <label>Brief<textarea name="message" placeholder="Corridor, size, timing, confidentiality notes."></textarea></label>
+        <p data-status class="muted"></p>
+        <button class="btn btn-gold" type="submit">Submit inquiry</button>
       </form>
     </div>
   </div>
-
-  <script>
-    function openModal() {
-      document.getElementById('mandateModal').classList.remove('hidden');
-      document.getElementById('mandateModal').classList.add('flex');
-    }
-
-    function closeModal() {
-      document.getElementById('mandateModal').classList.remove('flex');
-      document.getElementById('mandateModal').classList.add('hidden');
-      document.getElementById('formStatus').classList.add('hidden');
-    }
-
-    // Handle AJAX form submission to stay on page and close modal on success
-    const form = document.getElementById('mandateForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const formStatus = document.getElementById('formStatus');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
-
-      const data = new FormData(form);
-
-      try {
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          formStatus.textContent = "Thank you! Your inquiry has been submitted successfully.";
-          formStatus.className = "mb-4 text-sm font-semibold p-3 rounded-lg text-emerald-400 bg-emerald-950/60 border border-emerald-800 block";
-          form.reset();
-
-          setTimeout(() => {
-            closeModal();
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Inquiry';
-          }, 2000);
-        } else {
-          throw new Error('Form submission failed');
-        }
-      } catch (error) {
-        formStatus.textContent = "Something went wrong. Please try again or reach out directly.";
-        formStatus.className = "mb-4 text-sm font-semibold p-3 rounded-lg text-rose-400 bg-rose-950/60 border border-rose-800 block";
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Inquiry';
-      }
-    });
-  </script>
-  
+  <script src="script.js"></script>
 </body>
 </html>

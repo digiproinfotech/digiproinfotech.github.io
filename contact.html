@@ -4,92 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confidential Desk | Kanta Asset Advisory</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
-  </style>
+  <meta name="description" content="Direct advisory access for off-market commercial sourcing and corporate leasing in South Mumbai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
-
-  <!-- Responsive Executive Navigation -->
-  <header class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-      
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="index.html" class="text-base sm:text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
-        <span class="text-[10px] sm:text-xs text-slate-400 border-l border-slate-700 pl-2 sm:pl-3 hidden xs:inline">Powered by DigiPro AI</span>
-      </div>
-
-      <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
-        <a href="index.html" class="hover:text-white transition">Overview</a>
-        <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
-        <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
-        <a href="contact.html" class="text-amber-400 font-semibold">Contact</a>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Kanta Asset Advisory">
+        <span class="brand-text">
+          <strong>KANTA ASSET ADVISORY</strong>
+          <span>Powered by DigiPro AI</span>
+        </span>
+      </a>
+      <nav class="links" id="navLinks">
+        <a href="index.html">Overview</a>
+        <a href="sourcing-desk.html">Sourcing Desk</a>
+        <a href="coverage.html">South Mumbai Corridors</a>
+        <a class="active" href="contact.html">Contact</a>
       </nav>
-
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden xs:inline">WhatsApp</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
-          <i class="fa-brands fa-linkedin text-sm"></i> <span class="hidden xs:inline">Profile</span>
-        </a>
+      <div class="nav-cta">
+        <a class="icon-btn wa" href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" aria-label="WhatsApp">WA</a>
+        <a class="icon-btn in" href="https://www.linkedin.com/in/kanta-cre" aria-label="LinkedIn">in</a>
+        <button class="menu-btn" type="button" data-menu>MENU</button>
       </div>
-
-    </div>
-
-    <!-- Mobile Sub-Navigation Bar -->
-    <div class="lg:hidden bg-slate-950/80 border-t border-slate-800/80 px-4 py-2 flex justify-around text-[12px] font-medium text-slate-300">
-      <a href="index.html" class="hover:text-amber-400">Overview</a>
-      <a href="sourcing-desk.html" class="hover:text-amber-400">Sourcing</a>
-      <a href="coverage.html" class="hover:text-amber-400">Corridors</a>
-      <a href="contact.html" class="text-amber-400">Contact</a>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <section class="pt-36 pb-20 px-6 max-w-3xl mx-auto text-center">
-    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Confidential Advisory Desk</h1>
-    <p class="text-slate-400 text-sm sm:text-base mb-10 max-w-xl mx-auto">
-      Direct advisory access for off-market commercial sourcing, corporate leasing, and transaction execution in South Mumbai.
-    </p>
-
-    <!-- Clean Single Contact Card Block -->
-    <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl text-left space-y-6 shadow-xl">
-      
-      <!-- Direct Email Link -->
-      <a href="mailto:sunil@digiproai.com" class="flex items-center space-x-4 border-b border-slate-800 pb-6 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-amber-400 text-xl group-hover:bg-amber-400 group-hover:text-slate-950 transition"><i class="fa-solid fa-envelope"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Communication</span>
-          <p class="text-lg font-bold text-white group-hover:text-amber-400 transition">Email Desk</p>
-        </div>
-      </a>
-
-      <!-- WhatsApp Direct Link -->
-      <a href="https://wa.me/919004099113?text=Direct%20Mandate%20Inquiry" target="_blank" class="flex items-center space-x-4 border-b border-slate-800 pb-6 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-emerald-400 text-xl group-hover:bg-emerald-500 group-hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Instant Priority Messaging</span>
-          <p class="text-lg font-bold text-white group-hover:text-emerald-400 transition">WhatsApp Advisory Desk</p>
-        </div>
-      </a>
-
-      <!-- LinkedIn Executive Profile Link -->
-      <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center space-x-4 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-blue-400 text-xl group-hover:bg-blue-600 group-hover:text-white transition"><i class="fa-brands fa-linkedin"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Executive Network</span>
-          <p class="text-lg font-bold text-white group-hover:text-blue-400 transition">LinkedIn Executive Profile</p>
-        </div>
-      </a>
-
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Confidential advisory desk</p>
+      <h1>Write once. We do not circulate the brief.</h1>
+      <p class="lede">Direct access for off-market commercial sourcing, corporate leasing and transaction execution in South Mumbai.</p>
     </div>
   </section>
 
-  <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
-    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Confidential Executive Sourcing Desk.</p>
+  <section>
+    <div class="wrap contact-grid">
+      <div class="contact-list">
+        <a href="mailto:sunil@digiproai.com"><small>Email desk</small><strong>sunil@digiproai.com</strong></a>
+        <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate"><small>WhatsApp</small><strong>+91 90040 99113</strong></a>
+        <a href="https://www.linkedin.com/in/kanta-cre"><small>Executive network</small><strong>linkedin.com/in/kanta-cre</strong></a>
+      </div>
+      <form class="form" action="https://formspree.io/f/maenolzv" method="POST" data-formspree>
+        <input type="hidden" name="_subject" value="South Mumbai CRE mandate">
+        <label>Name<input name="name" required></label>
+        <label>Organisation<input name="organisation"></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Phone<input name="phone"></label>
+        <label>Mandate type
+          <select name="mandate">
+            <option>Corporate leasing</option>
+            <option>Acquisition</option>
+            <option>Land / redevelopment</option>
+            <option>Owner representation</option>
+          </select>
+        </label>
+        <label>Brief<textarea name="message" placeholder="Corridor, size, timing, confidentiality notes."></textarea></label>
+        <p data-status class="muted"></p>
+        <button class="btn btn-gold" type="submit">Submit inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 Kanta Asset Advisory &amp; DigiPro AI</div>
+      <div>Mandates treated as confidential</div>
+    </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
