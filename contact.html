@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body { background-color: #0b0f19; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
-    .bg-gold { background-color: #d4af37; }
   </style>
 </head>
 <body class="antialiased">
@@ -17,21 +16,18 @@
   <header class="fixed w-full z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
       
-      <!-- Logo / Brand -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <a href="index.html" class="text-base sm:text-xl font-bold tracking-wider text-white">KANTA ASSET ADVISORY</a>
         <span class="text-[10px] sm:text-xs text-slate-400 border-l border-slate-700 pl-2 sm:pl-3 hidden xs:inline">Powered by DigiPro AI</span>
       </div>
 
-      <!-- Desktop Navigation Links -->
       <nav class="hidden lg:flex space-x-8 text-sm text-slate-300">
         <a href="index.html" class="hover:text-white transition">Overview</a>
         <a href="sourcing-desk.html" class="hover:text-white transition">Sourcing Desk</a>
         <a href="coverage.html" class="hover:text-white transition">South Mumbai Corridors</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
+        <a href="contact.html" class="text-amber-400 font-semibold">Contact</a>
       </nav>
 
-      <!-- Quick Action Buttons (Visible on Mobile & Desktop) -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <a href="https://wa.me/919004099113?text=Inquiry%20regarding%20South%20Mumbai%20CRE%20Mandate" target="_blank" class="flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-4 py-2 rounded-md transition">
           <i class="fa-brands fa-whatsapp text-sm"></i> <span class="hidden xs:inline">WhatsApp</span>
@@ -48,73 +44,60 @@
       <a href="index.html" class="hover:text-amber-400">Overview</a>
       <a href="sourcing-desk.html" class="hover:text-amber-400">Sourcing</a>
       <a href="coverage.html" class="hover:text-amber-400">Corridors</a>
-      <a href="contact.html" class="hover:text-amber-400">Contact</a>
+      <a href="contact.html" class="text-amber-400">Contact</a>
     </div>
   </header>
 
   <!-- Main Content -->
   <section class="pt-36 pb-20 px-6 max-w-4xl mx-auto text-center">
-    <h1 class="text-4xl font-extrabold text-white mb-4">Confidential Advisory Desk</h1>
-    <p class="text-slate-400 text-lg mb-12">Connect directly regarding private acquisition mandates, off-market inventory, or institutional commercial leasing.</p>
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Confidential Advisory Desk</h1>
+    <p class="text-slate-400 text-sm sm:text-base mb-10 max-w-2xl mx-auto">
+      Submit direct requirements for off-market commercial sourcing, corporate leasing, or asset acquisitions in South Mumbai.
+    </p>
 
-    <div class="bg-slate-900 border border-slate-800 p-8 rounded-xl text-left space-y-6">
-      
-      <!-- Direct Email Link -->
-      <a href="mailto:sunil@digiproai.com" class="flex items-center space-x-4 border-b border-slate-800 pb-6 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-amber-400 text-xl group-hover:bg-amber-400 group-hover:text-slate-950 transition"><i class="fa-solid fa-envelope"></i></div>
+    <!-- Formspree Contact Form -->
+    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-xl text-left shadow-xl">
+      <form action="https://formspree.io/f/maenolzv" method="POST" class="space-y-5">
         <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Email Desk</span>
-          <p class="text-lg font-bold text-white group-hover:text-amber-400 transition">sunil@digiproai.com</p>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Full Name</label>
+          <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="e.g. Corporate / Advisory Contact">
         </div>
-      </a>
 
-      <!-- WhatsApp Direct Link -->
-      <a href="https://wa.me/919004099113?text=Direct%20Mandate%20Inquiry" target="_blank" class="flex items-center space-x-4 border-b border-slate-800 pb-6 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-emerald-400 text-xl group-hover:bg-emerald-500 group-hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Instant Priority Messaging</span>
-          <p class="text-lg font-bold text-white group-hover:text-emerald-400 transition">WhatsApp Business Advisory Desk</p>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Email</label>
+            <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="name@company.com">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Contact Number</label>
+            <input type="tel" name="phone" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="+91 90040 99113">
+          </div>
         </div>
-      </a>
 
-      <!-- LinkedIn Executive Profile Link -->
-      <a href="https://www.linkedin.com/in/kanta-cre" target="_blank" class="flex items-center space-x-4 hover:bg-slate-800/50 p-3 rounded-lg transition group">
-        <div class="bg-slate-800 p-4 rounded-full text-blue-400 text-xl group-hover:bg-blue-600 group-hover:text-white transition"><i class="fa-brands fa-linkedin"></i></div>
         <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Executive Network</span>
-          <p class="text-lg font-bold text-white group-hover:text-blue-400 transition">LinkedIn Executive Profile</p>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Requirement Type</label>
+          <select name="requirement_type" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-amber-400 transition">
+            <option value="Commercial Office Space (Lease/Purchase)">Commercial Office Space (Lease/Purchase)</option>
+            <option value="Off-Market Commercial Asset Acquisition">Off-Market Commercial Asset Acquisition</option>
+            <option value="Joint Venture / Commercial Redevelopment Land">Joint Venture / Commercial Redevelopment Land</option>
+            <option value="Other Institutional Inquiry">Other Institutional Inquiry</option>
+          </select>
         </div>
-      </a>
 
-    </div>
-      <div class="flex items-center space-x-4 border-b border-slate-800 pb-6">
-        <div class="bg-slate-800 p-4 rounded-full text-amber-400 text-xl"><i class="fa-solid fa-envelope"></i></div>
         <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Direct Email Desk</span>
-          <p class="text-lg font-bold text-white">sunil@digiproai.com</p>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Mandate Details / Specific Location Requirement</label>
+          <textarea name="message" rows="4" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="Specify carpet area requirements, budget range, or target corridor (e.g. Lower Parel, Worli, Nariman Point)..."></textarea>
         </div>
-      </div>
 
-      <div class="flex items-center space-x-4 border-b border-slate-800 pb-6">
-        <div class="bg-slate-800 p-4 rounded-full text-emerald-400 text-xl"><i class="fa-brands fa-whatsapp"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Instant Priority Messaging</span>
-          <p class="text-lg font-bold text-white">WhatsApp Business Advisory Desk</p>
-        </div>
-      </div>
-
-      <div class="flex items-center space-x-4">
-        <div class="bg-slate-800 p-4 rounded-full text-blue-400 text-xl"><i class="fa-brands fa-linkedin"></i></div>
-        <div>
-          <span class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Executive Network</span>
-          <p class="text-lg font-bold text-white">LinkedIn Executive Profile</p>
-        </div>
-      </div>
+        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3.5 px-6 rounded-lg transition text-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Submit Inquiry to Advisory Desk
+        </button>
+      </form>
     </div>
   </section>
 
   <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-500">
-    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Direct Desk: sunil@digiproai.com</p>
+    <p>© 2026 Kanta Asset Advisory & DigiPro AI. Confidential Executive Sourcing Desk.</p>
   </footer>
 </body>
 </html>
