@@ -69,7 +69,11 @@
       <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
         <button onclick="openModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm flex items-center gap-2">
           <i class="fa-solid fa-paper-plane"></i> Request Confidential Mandate
+        <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+        <button onclick="openModal()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-3.5 rounded-md transition text-sm flex items-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Enquiry
         </button>
+      </div>
       </div>
     </div>
     
@@ -118,7 +122,10 @@
       <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Request Confidential Mandate</h2>
       <p class="text-xs sm:text-sm text-slate-400 mb-6">Submit requirements for off-market commercial office sourcing or asset acquisitions.</p>
 
-      <form action="https://formspree.io/f/maenolzv" method="POST" class="space-y-4">
+      <!-- Status Message Alert -->
+      <div id="formStatus" class="hidden mb-4 text-sm font-semibold p-3 rounded-lg text-emerald-400 bg-emerald-950/60 border border-emerald-800"></div>
+
+      <form id="mandateForm" action="https://formspree.io/f/maenolzv" method="POST" class="space-y-4">
         <div>
           <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Full Name</label>
           <input type="text" name="name" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="e.g. Corporate / Advisory Contact">
@@ -150,7 +157,7 @@
           <textarea name="message" rows="3" required class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 transition" placeholder="Specify carpet area, budget range, or target corridor..."></textarea>
         </div>
 
-        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-lg transition text-sm flex items-center justify-center gap-2">
+        <button type="submit" id="submitBtn" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 px-6 rounded-lg transition text-sm flex items-center justify-center gap-2">
           <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
         </button>
       </form>
@@ -162,10 +169,53 @@
       document.getElementById('mandateModal').classList.remove('hidden');
       document.getElementById('mandateModal').classList.add('flex');
     }
+
     function closeModal() {
       document.getElementById('mandateModal').classList.remove('flex');
       document.getElementById('mandateModal').classList.add('hidden');
+      document.getElementById('formStatus').classList.add('hidden');
     }
+
+    // Handle AJAX form submission to stay on page and close modal on success
+    const form = document.getElementById('mandateForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          formStatus.textContent = "Thank you! Your inquiry has been submitted successfully.";
+          formStatus.className = "mb-4 text-sm font-semibold p-3 rounded-lg text-emerald-400 bg-emerald-950/60 border border-emerald-800 block";
+          form.reset();
+
+          setTimeout(() => {
+            closeModal();
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Inquiry';
+          }, 2000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        formStatus.textContent = "Something went wrong. Please try again or reach out directly.";
+        formStatus.className = "mb-4 text-sm font-semibold p-3 rounded-lg text-rose-400 bg-rose-950/60 border border-rose-800 block";
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Inquiry';
+      }
+    });
   </script>
   
 </body>
